@@ -18,7 +18,7 @@ const Contacto = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`https://backdesgruapchat.onrender.com/send-email`, {
+      const response = await fetch(`${SERVER_URL}/sendEmail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
