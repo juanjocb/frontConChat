@@ -10,7 +10,7 @@ const Gruas = () => {
   const [busqueda, setBusqueda] = useState('');
 
   useEffect(() => {
-    axios.get('https://backendprocesogruap-1.onrender.com/getGruasInfo')
+    axios.get('https://backdesgruapchat.onrender.com/getGruasInfo')
       .then((response) => {
         console.log(response.data);
         setGruas(response.data);
