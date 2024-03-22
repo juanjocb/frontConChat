@@ -98,7 +98,7 @@ function AgregarGrua() {
         idAdmin: 1
       };
 
-      await axios.post("https://backendprocesogruap-1.onrender.com/gruas", gruaData);
+      await axios.post("https://backdesgruapchat.onrender.com/gruas", gruaData);
 
       setGruaInfo({
         marca: "",

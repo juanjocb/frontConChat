@@ -1,1 +1,1 @@
-export const SERVER_URL = 'https://backendprocesogruap-1.onrender.com';
+export const SERVER_URL = 'https://backdesgruapchat.onrender.com';

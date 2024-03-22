@@ -26,7 +26,7 @@ function ProfileForm() {
 
   useEffect(() => {
     if (user?.idCliente) {
-      axios.get(`https://backendprocesogruap-1.onrender.com/gruasClient/${user.idCliente}`)
+      axios.get(`https://backdesgruapchat.onrender.com/gruasClient/${user.idCliente}`)
         .then((response) => {
           setUserCranes(response.data);
         })
@@ -45,7 +45,7 @@ function ProfileForm() {
 
   const handleDeleteGrua = (idGrua) => {
     console.log(idGrua);
-    axios.delete(`https://backendprocesogruap-1.onrender.com/eliminarGrua/${idGrua}`)
+    axios.delete(`https://backdesgruapchat.onrender.com/eliminarGrua/${idGrua}`)
       .then(() => {
         setUserCranes(prevCranes => prevCranes.filter(grua => grua.idGrua !== idGrua));
       })
@@ -70,7 +70,7 @@ function ProfileForm() {
     console.log(newData);
     
     // Enviar la solicitud para actualizar la grúa
-    axios.put(`https://backendprocesogruap-1.onrender.com/editarGrua/${idGrua}`, newData)
+    axios.put(`https://backdesgruapchat.onrender.com/editarGrua/${idGrua}`, newData)
       .then(() => {
         setUserCranes(prevCranes => {
           return prevCranes.map((grua, idx) => {
@@ -104,7 +104,7 @@ function ProfileForm() {
   };
 
   const handleSubmitEditUser = () => {
-    axios.put(`https://backendprocesogruap-1.onrender.com/editarUser/${user.idCliente}`, editedUserData)
+    axios.put(`https://backdesgruapchat.onrender.com/editarUser/${user.idCliente}`, editedUserData)
       .then((response) => {
         console.log('Usuario actualizado exitosamente:', response.data);
         setEditingUser(false);
